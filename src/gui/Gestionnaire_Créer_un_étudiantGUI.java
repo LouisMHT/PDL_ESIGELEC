@@ -55,6 +55,7 @@ public class Gestionnaire_Créer_un_étudiantGUI {
 		});
 	}
 
+	
 	/**
 	 * Create the application.
 	 */
