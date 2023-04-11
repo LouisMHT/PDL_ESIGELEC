@@ -38,6 +38,7 @@ public class Gestionnaire_Créer_un_étudiantGUI {
 	private JTextField textField_10;
 	private JTextField textField_11;
 	private JTextField textField_13;
+	private JFrame frmEsigelec0;
 
 	/**
 	 * Launch the application.
@@ -55,7 +56,6 @@ public class Gestionnaire_Créer_un_étudiantGUI {
 		});
 	}
 
-	
 	/**
 	 * Create the application.
 	 */
@@ -250,7 +250,7 @@ public class Gestionnaire_Créer_un_étudiantGUI {
 		btnValider_1.setFont(new Font("Tahoma", Font.PLAIN, 20));
 		btnValider_1.setBounds(1011, 459, 144, 31);
 		frmEsigelec.getContentPane().add(btnValider_1);
-		/*
+		
 		btnValider_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if (textField_10.getText().length() > 0) {
@@ -261,10 +261,10 @@ public class Gestionnaire_Créer_un_étudiantGUI {
 					String Mail = textField_5.getText();
 					String Filiere = textField_7.getText();
 					String MDP = passwordField_1.getText();
-					
+					int ge = Integer.parseInt(textField_13.getText());
 				
 					Etudiant_ettDAO etudDao = new Etudiant_ettDAO();
-					Etudiant_ett unEtudiantmod = new Etudiant_ett(idmod, nom, prenom, Mail, Filiere, MDP, 1);
+					Etudiant_ett unEtudiantmod = new Etudiant_ett(idmod, nom, prenom, Mail, Filiere, MDP, ge);
 					etudDao.modifierUnEtudiant(unEtudiantmod);
 					
 				} else {
@@ -273,7 +273,7 @@ public class Gestionnaire_Créer_un_étudiantGUI {
 				}
 			}
 		});
-		*/
+		
 		JButton btnValider_2 = new JButton("Valider");
 		btnValider_2.setFont(new Font("Tahoma", Font.PLAIN, 20));
 		btnValider_2.setBounds(1011, 187, 144, 31);

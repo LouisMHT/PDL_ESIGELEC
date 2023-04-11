@@ -52,13 +52,14 @@ int returnValue = 0;
 try {
 //connect to the database
 con = DriverManager.getConnection(URL, LOGIN, PASS);
-ps = con.prepareStatement("UPDATE etudiant_ett set nom_ett = ?, prenom_ett = ?, filiere_ett = ?, mail_ett = ?, mdp_ett = ? WHERE id_ett = ?");
-ps.setString(2, unEtudiant.getNom_ett());
-ps.setString(3, unEtudiant.getPrenom_ett());
-ps.setString(4, unEtudiant.getFiliere_ett());
-ps.setString(5, unEtudiant.getMail_ett());
-ps.setString(6, unEtudiant.getMdp_ett());
-ps.setInt(1, unEtudiant.getId_ett());
+ps = con.prepareStatement("UPDATE etudiant_ett set nom_ett = ?, prenom_ett = ?, filiere_ett = ?, mail_ett = ?, mdp_ett = ?, id_ge = ? WHERE id_ett = ?");
+ps.setString(1, unEtudiant.getNom_ett());
+ps.setString(2, unEtudiant.getPrenom_ett());
+ps.setString(3, unEtudiant.getFiliere_ett());
+ps.setString(4, unEtudiant.getMail_ett());
+ps.setString(5, unEtudiant.getMdp_ett());
+ps.setInt(6, unEtudiant.getId_ge());
+ps.setInt(7, unEtudiant.getId_ett());
 // Execution of the raquette
 returnValue = ps.executeUpdate();
 }

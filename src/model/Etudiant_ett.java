@@ -8,8 +8,8 @@ private String filiere_ett;
 private String mail_ett;
 private String mdp_ett;
 private int id_ge;
-private ArrayList<Absence_abs>listeAbsence;
-private ArrayList<GroupeEtudiant_ge>listeGroupeEtudiant;
+//private ArrayList<Absence_abs>listeAbsence;
+//private ArrayList<GroupeEtudiant_ge>listeGroupeEtudiant;
 /*
  * Constructor of class etudiant_ett
  */
@@ -22,8 +22,8 @@ this.filiere_ett = filiere_ett;
 this.mail_ett = mail_ett;
 this.mdp_ett = mdp_ett;
 this.id_ge = id_ge;
-listeAbsence = new ArrayList<>();
-listeGroupeEtudiant = new ArrayList<>();
+//listeAbsence = new ArrayList<>();
+//listeGroupeEtudiant = new ArrayList<>();
 }
 /*
  * Getters and setters of attributes
@@ -69,7 +69,7 @@ this.mdp_ett = mdp_ett;
 }
 /*
  * calculate the total number of absences
- */
+
 public int totalAbsence() {
 int sum = 0;
 for (int i=0; i< listeAbsence.size(); i++) {
@@ -79,37 +79,37 @@ return sum;
 }
 /*
  * add an absence
- */
+ 
 public void ajouterUneAbsence(Absence_abs uneAbsence) {
 listeAbsence.add(uneAbsence);
 }
 /*
  * modify an absence
- */
+ 
 public void modifierUneAbsence(Absence_abs uneAbsence) {
 listeAbsence.set(id_ett, uneAbsence);
 }
 /*
  * delete an absence
- */
+ 
 public void supprimerUneAbsence(Absence_abs uneAbsence) {
 listeAbsence.remove(uneAbsence);
 }
 /*
  * add a student group
- */
+ 
 public void ajouterGroupe(GroupeEtudiant_ge unGroupe) {
 listeGroupeEtudiant.add(unGroupe);
 }
 /*
  * modify a student group
- */
+ 
 public void modifierGroupe(GroupeEtudiant_ge unGroupe) {
 listeGroupeEtudiant.set(id_ett, unGroupe);
 }
 /*
  * delete a student group
- */
+ 
 public void supprimerGroupe(GroupeEtudiant_ge unGroupe) {
 listeGroupeEtudiant.remove(unGroupe);
 }
